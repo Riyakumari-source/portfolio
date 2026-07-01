@@ -790,11 +790,11 @@ export default function App() {
                 </a>
 
                 <a
-                  href="tel:+918825157131"
+                  href="tel:+918102712155"
                   className="flex items-center justify-center space-x-3 px-6 py-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-sm hover:border-indigo-500 dark:hover:border-indigo-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors shadow-sm w-full sm:w-auto"
                 >
                   <Phone className="w-4.5 h-4.5 text-indigo-500" />
-                  <span className="font-semibold text-slate-900 dark:text-white">+91 88251 57131</span>
+                  <span className="font-semibold text-slate-900 dark:text-white">+91 81027 12155</span>
                 </a>
               </div>
 
