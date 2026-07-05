@@ -762,6 +762,15 @@ body {
     margin-top: -160px;
     margin-bottom: 0;
   }
+  .career-section h2 {
+    opacity: 1;
+  }
+  .career-timeline {
+    max-height: 100%;
+  }
+  .career-info-box {
+    opacity: 1;
+  }
 }
 
 @media only screen and (max-width: 900px) {
