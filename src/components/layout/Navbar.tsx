@@ -1,5 +1,5 @@
 /* eslint-disable react-refresh/only-export-components */
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { gsap } from "gsap";
 import Lenis from "lenis";
@@ -27,6 +27,15 @@ const HoverLinks = ({ text, cursor }: { text: string; cursor?: boolean }) => {
 };
 
 export const Navbar = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  // Pause scrolling when mobile menu is open
+  useEffect(() => {
+    if (scrollEngine) {
+      scrollEngine.paused(isMenuOpen);
+    }
+  }, [isMenuOpen]);
+
   useEffect(() => {
     const scrollInstance = new Lenis({
       duration: 1.1,
@@ -68,19 +77,27 @@ export const Navbar = () => {
     };
 
     scrollEngine.scrollTop(0);
-    // Do NOT pause on start — allow scrolling immediately
 
-    const navLinks = document.querySelectorAll(".header ul a");
     const handleNavLinkClick = (event: Event) => {
-      if (window.innerWidth > 1024) {
-        event.preventDefault();
-        const clickedAnchor = event.currentTarget as HTMLAnchorElement;
-        const targetSectionSelector = clickedAnchor.getAttribute("data-href");
-        if (targetSectionSelector) {
+      event.preventDefault();
+      const clickedAnchor = event.currentTarget as HTMLAnchorElement;
+      const targetSectionSelector = clickedAnchor.getAttribute("data-href");
+      if (targetSectionSelector) {
+        setIsMenuOpen(false);
+        if (scrollEngine) {
           scrollEngine.scrollTo(targetSectionSelector, true);
+        } else {
+          const element = document.querySelector(targetSectionSelector);
+          if (element) {
+            element.scrollIntoView({ behavior: "smooth" });
+          }
         }
       }
     };
+
+    // Query links in both desktop header and mobile menu overlay
+    const getLinks = () => document.querySelectorAll(".header ul a, .mobile-menu-links a");
+    const navLinks = getLinks();
 
     navLinks.forEach((anchor) => {
       anchor.addEventListener("click", handleNavLinkClick);
@@ -109,7 +126,7 @@ export const Navbar = () => {
         >
           riakri0207@gmail.com
         </a>
-        <ul>
+        <ul className="desktop-menu">
           {ROUTES.map((route) => (
             <li key={route.path}>
               <a data-href={route.path} href={route.path}>
@@ -118,6 +135,31 @@ export const Navbar = () => {
             </li>
           ))}
         </ul>
+        <button
+          className={`hamburger ${isMenuOpen ? "open" : ""}`}
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+          aria-label="Toggle navigation menu"
+          data-cursor="disable"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+
+      <div className={`mobile-menu-overlay ${isMenuOpen ? "open" : ""}`}>
+        <div className="mobile-menu-links">
+          {ROUTES.map((route) => (
+            <a
+              key={`mobile-${route.path}`}
+              data-href={route.path}
+              href={route.path}
+              className="mobile-menu-link"
+            >
+              {route.label}
+            </a>
+          ))}
+        </div>
       </div>
 
       <div className="hero-circle1"></div>

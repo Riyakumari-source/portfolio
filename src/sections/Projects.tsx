@@ -4,7 +4,7 @@ import { useGSAP } from "@gsap/react";
 import { showcaseProjectsList } from "../data/projects";
 import { runProjectSlideTransition } from "../animations/projectAnimation";
 
-const AUTO_SLIDE_DURATION = 2000;
+const AUTO_SLIDE_DURATION = 6000;
 
 export const Projects = () => {
   const [activeProjectIdx, setActiveProjectIdx] = useState(0);

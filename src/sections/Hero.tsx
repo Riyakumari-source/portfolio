@@ -12,6 +12,7 @@ export const Hero = ({ children }: PropsWithChildren) => {
             <span>KUMARI</span>
           </h1>
         </div>
+        {children}
         <div className="hero-info">
           <h3>A Creative</h3>
           <h2 className="hero-info-h2">
@@ -24,7 +25,6 @@ export const Hero = ({ children }: PropsWithChildren) => {
           </h2>
         </div>
       </div>
-      {children}
     </div>
   );
 };

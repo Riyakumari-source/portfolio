@@ -29,7 +29,9 @@ export const Skills = () => {
       }
     };
 
-    if (activeTouchMode) {
+    const isMobileTablet = window.innerWidth <= 1024;
+
+    if (activeTouchMode || isMobileTablet) {
       items.forEach((item) => {
         if (item) {
           item.classList.remove("what-noTouch");
