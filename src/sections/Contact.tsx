@@ -8,7 +8,7 @@ interface SocialMediaLink {
 export const Contact = () => {
   const externalSocials: SocialMediaLink[] = [
     { label: "Github", url: "https://github.com/Riyakumari-source" },
-    { label: "Linkedin", url: "https://www.linkedin.com/in/riya-kumari-7b5a031a4/" }
+    { label: "Linkedin", url: "https://www.linkedin.com/in/riya-kumari-93937b307/" }
   ];
 
   return (

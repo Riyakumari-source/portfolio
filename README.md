@@ -7,7 +7,7 @@
 ### Full Stack Developer · MCA Graduate · Bihar, India
 
 [![Live Portfolio](https://img.shields.io/badge/🌐_Live_Portfolio-Visit_Now-ff5fa0?style=for-the-badge)](https://riyakumari-source.github.io/portfolio)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/riya-kumari-7b5a031a4)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/riya-kumari-93937b307)
 [![GitHub](https://img.shields.io/badge/GitHub-Follow-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Riyakumari-source)
 [![Email](https://img.shields.io/badge/Email-riakri0207@gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:riakri0207@gmail.com)
 
@@ -152,7 +152,7 @@ npm run build
 | Platform | Link |
 |---|---|
 | 📧 **Email** | [riakri0207@gmail.com](mailto:riakri0207@gmail.com) |
-| 💼 **LinkedIn** | [linkedin.com/in/riya-kumari-7b5a031a4](https://www.linkedin.com/in/riya-kumari-7b5a031a4) |
+| 💼 **LinkedIn** | [linkedin.com/in/riya-kumari-93937b307](https://www.linkedin.com/in/riya-kumari-93937b307) |
 | 🐙 **GitHub** | [github.com/Riyakumari-source](https://github.com/Riyakumari-source) |
 | 📍 **Location** | Bihar, India |
 | 💼 **Availability** | Open to Full-Time Opportunities & Open to Relocate |
